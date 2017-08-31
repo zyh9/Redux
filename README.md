@@ -1,8 +1,14 @@
 ﻿# Redux
+
 ## 介绍
+
+### redux是一个针对JavaScript应用的可预测的状态管理器。
 > 应用中所有的 state 都以一个对象树的形式储存在一个单一的 store 中。
-惟一改变 state 的办法是触发 action，一个描述发生什么的对象。
-为了描述 action 如何改变 state 树，这时你就需要编写 reducers。
+> 惟一改变 state 的办法是触发 action，一个描述发生什么的对象。
+> 为了描述 action 如何改变 state 树，这时你就需要编写 reducers。
+
+### 小例子
+
 ```
 import { createStore } from 'redux';
 
@@ -46,3 +52,15 @@ store.dispatch({ type: 'INCREMENT' });
 store.dispatch({ type: 'DECREMENT' });
 // 1
 ```
+### 三大原则
+
+#### 单一数据源
+> 整个应用的 state 被储存在一棵 object tree 中，并且这个 object tree 只存在于唯一一个 store 中。
+
+#### State 是只读的
+> 惟一改变 state 的方法就是触发 action，action 是一个用于描述已发生事件的普通对象。
+
+#### 使用纯函数来执行修改
+> 为了描述 action 如何改变 state tree ，这时你就需要编写 reducers。
+> Reducer 只是一些纯函数，它接收先前的 state 和 action，并返回新的 state。
+
