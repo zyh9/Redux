@@ -54,7 +54,7 @@ react-redux
             mapSatateToProps 函数
             	接收一个state，这个state是整个应用的state
             	返回一个 js对象， 对象的属性会合并到组件的props里面
-       		 第二个参数
+       		第二个参数
             mapDispatchToProps 函数
             	接收一个dispatch， 这个dispatch就是store.dispatch
             	返回一个 js对象， 对象的属性会合并到组件的props里面

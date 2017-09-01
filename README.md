@@ -3,11 +3,13 @@
 ## 介绍
 
 ### redux是一个针对JavaScript应用的可预测的状态管理器。
-> 应用中所有的 state 都以一个对象树的形式储存在一个单一的 store 中。
-
-> 惟一改变 state 的办法是触发 action，一个描述发生什么的对象。
-
-> 为了描述 action 如何改变 state 树，这时你就需要编写 reducers。
+```
+    应用中所有的 state 都以一个对象树的形式储存在一个单一的 store 中。
+    
+    惟一改变 state 的办法是触发 action，一个描述发生什么的对象。
+    
+    为了描述 action 如何改变 state 树，这时你就需要编写 reducers。
+```
 
 ### 小例子
 
@@ -83,29 +85,32 @@ store.dispatch({ type: 'DECREMENT' });
 
 ### Store
 > 使用 action 来描述“发生了什么”，使用 reducers 来根据 action 更新 state 的用法。而 Store 就是把它们联系到一起的对象。store 有以下职责：
-
-> 维持应用的 state；
-
-> 提供 getState() 方法获取 state；
-
-> 提供 dispatch(action) 方法更新 state；
-
-> 通过 subscribe(listener) 注册监听器;
-
-> 通过 subscribe(listener) 返回的函数注销监听器。
+```
+    维持应用的 state；
+    
+    提供 getState() 方法获取 state；
+    
+    提供 dispatch(action) 方法更新 state；
+    
+    通过 subscribe(listener) 注册监听器;
+    
+    通过 subscribe(listener) 返回的函数注销监听器。
+```
 
 ### 数据流
-> 严格的单向数据流是 Redux 架构的设计核心。
-
-> Redux 应用中数据的生命周期遵循下面 4 个步骤：
-
-> 1.调用 store.dispatch(action)。
-
-> 2.Redux store 调用传入的 reducer 函数。
-
-> 3.根 reducer 应该把多个子 reducer 输出合并成一个单一的 state 树。
-
-> 4.Redux store 保存了根 reducer 返回的完整 state 树。
+```
+    严格的单向数据流是 Redux 架构的设计核心。
+    
+    Redux 应用中数据的生命周期遵循下面 4 个步骤：
+    
+        1.调用 store.dispatch(action)。
+    
+        2.Redux store 调用传入的 reducer 函数。
+    
+        3.根 reducer 应该把多个子 reducer 输出合并成一个单一的 state 树。
+    
+        4.Redux store 保存了根 reducer 返回的完整 state 树。
+```
 
 ### redux
 
@@ -163,9 +168,13 @@ store.dispatch({ type: 'DECREMENT' });
 #### bindActionCreators 接收两个参数
 ```
     第一个参数
+    
         一个对象， 对象的内容 就是你的 action creator
+        
     第二个参数
+    
         dispatch
+        
         返回一个对象， 对象的内容就是你的 绑定好的 action creator
 ```
         	
@@ -174,6 +183,7 @@ store.dispatch({ type: 'DECREMENT' });
 #### Provider
 ```
     接收一个store的prop
+    
     你应用的组件放他它的children里
 ```
 
@@ -181,11 +191,18 @@ store.dispatch({ type: 'DECREMENT' });
 > 只要有一个组件想拿到应用的某些数据(也可以全部)， 交个这个组件的props
 ```
 	第一个参数
+	
     mapSatateToProps 函数
+    
     	接收一个state，这个state是整个应用的state
+    	
     	返回一个 js对象， 对象的属性会合并到组件的props里面
-   	 第二个参数
+    	
+   	第二个参数
+   	
     mapDispatchToProps 函数
+    
     	接收一个dispatch， 这个dispatch就是store.dispatch
+    	
     	返回一个 js对象， 对象的属性会合并到组件的props里面
 ```
