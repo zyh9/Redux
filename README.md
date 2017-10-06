@@ -10,11 +10,11 @@
 
 #### store
 
-	    dispatch：发起action
-	    
-	    subscribe：注册监听器（只要发起action， 注册监听器就会执行）
-	    
-	    getState：拿到整个应用的数据
+		dispatch：发起action
+		
+		subscribe：注册监听器（只要发起action， 注册监听器就会执行）
+		
+		getState：拿到整个应用的数据
 
 #### action
 
