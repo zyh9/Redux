@@ -1,5 +1,14 @@
 ﻿## Redux
 
+### 安装react react-redux
+
+		npm install redux --save
+		npm install react-redux --save
+		
+		简写：
+		
+		npm i redux react-redux -S
+
 ### redux是一个针对JavaScript应用的可预测的状态管理器。
 
 		应用中所有的 state 都以一个对象树的形式储存在一个单一的 store 中。
