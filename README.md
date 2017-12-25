@@ -1,6 +1,6 @@
 ﻿## Redux
 
-### 安装react react-redux
+### 安装redux react-redux
 
 		npm install redux --save
 		npm install react-redux --save
