@@ -1,0 +1,77 @@
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.counterBox {
+    margin: 40px;
+    width: 480px;
+    background: url('img/bg.png') no-repeat;
+    box-sizing: border-box;
+    border-top: 1px solid transparent;
+    button.addCounter {
+        width: 160px;
+        height: 60px;
+        border: none;
+        background: url('img/addBtn.png');
+    }
+    .panel {
+        margin-top: 130px;
+        padding: 0 0 20px 40px;
+        background: #303030;
+    }
+    .counterPanel .counter button {
+        vertical-align: middle;
+    }
+    .counterPanel .counter .sub {
+        width: 50px;
+        height: 42px;
+        background: url('img/sub.png');
+    }
+    .counterPanel .counter .add {
+        width: 50px;
+        height: 42px;
+        background: url('img/add.png');
+    }
+    .counterPanel .counter span {
+        display: inline-block;
+        text-align: center;
+        width: 60px;
+        font-size: 32px;
+        color: #eee;
+        vertical-align: middle;
+    }
+    .counterPanel .counter .addIfOdd {
+        width: 110px;
+        height: 42px;
+        background: url('img/addOdd.png') no-repeat 0 -2px;
+    }
+    .counterPanel .counter .addAsync {
+        width: 110px;
+        height: 42px;
+        background: url('img/addsync.png') no-repeat 0 1px;
+    }
+    .counterPanel .counter .add,
+    .counterPanel .counter .addIfOdd,
+    .counterPanel .counter .addAsync {
+        margin-right: 8px;
+    }
+    .dashboard {
+        padding: 20px 40px;
+        background: #212221;
+        border-radius: 0 0 20px Infinitypx 0 20px 20px;
+        span {
+            display: inline-block;
+            width: 100px;
+            color: #aaa;
+            line-height: 26px;
+            font-size: 16px;
+        }
+    }
+}
+.nameList {
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    border-top: 1px solid #eee;
+}
