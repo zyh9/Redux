@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, bindActionCreators} from 'redux';
 import thunk from 'redux-thunk';
 import {Provider, connect} from 'react-redux';
-import reducer from './reducer/index';
-import * as actionsCreators from './actions/index';
+import reducer from './reducer';
+import * as actionsCreators from './actions';
 
 import CounterPanel from './component/counter/CounterPanel';
 import './common/style/main.less';
