@@ -25,7 +25,7 @@ class Commodity extends Component {
         let item = null;
         item = data.map((e,i) => {
             return <div className="item" key={i}>
-                <img src={e.img} />
+                <img src={e.img} alt="#" />
                 <span className="item_text">{e.info}</span>
                 <p className="item_info">
                     <span className="item_price">{'￥'+e.price}</span>

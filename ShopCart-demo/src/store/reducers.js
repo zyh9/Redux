@@ -11,10 +11,9 @@ function reducer(state = initialState, action){
         case AddConstants.ADD_ITEM_INFO:
             return Object.assign({},state,{
                 itemInfo: action.itemInfo
-            });
+            })
+        default:return state;
     }
-
-    return state;
 }
 
 // 创建 store
