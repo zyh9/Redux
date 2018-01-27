@@ -1,34 +1,41 @@
-body {
+*{
   margin: 0;
   padding: 0;
+}
+img{
+  border: 0;
+  display: block;
+}
+body {
   font-family: sans-serif;
 }
-
 .Commodity{
-  width:1200px;
+  width:980px;
   height:800px;
   margin:50px 0 0 100px;
   position: relative;
 }
 .item{
   width:230px;
-  height:360px;
+  height:340px;
   border:1px solid #eee;
   float: left;
-  margin:10px 20px 0 0;
+  margin:10px 10px 0 0;
   position: relative;
 }
-.item_info{
-  margin:0;
-  display: flex;
-  justify-content: space-around;
-}
 .item_text{
+  padding: 2px 12px;
+  display: block;
   font-size:12px;
   font-family: '微软雅黑';
 }
-.item_price{
+.item_info{
   font-size:16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+.item_price{
   font-weight:bold;
   color:#F40;
 }
@@ -38,13 +45,14 @@ body {
   position: absolute;
   bottom:0px;
   left:0;
-  margin:0;
+  right: 0;
   display: flex;
   justify-content: space-around;
 }
 .item_btn span{
+  cursor: pointer;
   display: inline-block;
-  width:110px;
+  flex-grow:1; 
   height:100%;
   text-align: center;
 }
