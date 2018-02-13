@@ -20,15 +20,18 @@ class ShopCart extends Component {
     }
 }
 
-const mapStateToProps = (state, props) => {
-    //state:reducer里面的状态,props:父组件的状态
+const mapStateToProps = (state, ownProps) => {
+    //state:reducer里面的状态,ownProps:父组件的状态
     return {
         itemInfo:state.itemInfo
     }
 }
 
-const mapDispatchToProps = {
-    addItem:Actions.addItem
+// 用来让你的组件获得 actionCreater(发起 action 的函数)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addItem:Actions.addItem
+    }  
 }
 
 ShopCart = connect(

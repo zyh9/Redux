@@ -7,7 +7,6 @@ import {
 import ShopList from './comm/shop_list';
 import ShopCart from './comm/shop_cart';
 
-
 class App extends Component {
   render() {
     return (

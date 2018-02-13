@@ -28,7 +28,9 @@ import reducers from './reducers';
 // 创建 store
 let store = createStore(
   reducers,
-  applyMiddleware(thunk)
+  applyMiddleware(thunk),
+  //redux启用调试工具
+  // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
 ReactDOM.render(

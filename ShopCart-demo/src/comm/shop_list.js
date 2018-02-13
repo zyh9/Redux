@@ -2,21 +2,20 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Actions } from '../actions/actions';
 import { data } from '../json/data';
-
 import { Link } from 'react-router-dom';
 
 class ShopList extends Component {
-
+    
     handleAddClick = (ev) =>{
+        console.log(this.props.itemInfo)
         let info = null;
         data.forEach((e) =>{
             if(e.id === Number(ev.target.id)){
                 info = e;
             }
         })
-        var arr = this.props.itemInfo;
-        arr.push(info);
-        this.props.addItem(arr);
+        let add = this.props.itemInfo.push(info);
+        this.props.addItem(add);
     };
 
     render() {
@@ -52,16 +51,18 @@ class ShopList extends Component {
 }
 
 // 用来让你的组件能够获得 reducer 里面的 state
-const mapStateToProps = (state, props) => {
-    //state:reducer里面的状态,props:父组件的状态
+const mapStateToProps = (state, ownProps) => {
+    //state:reducer里面的状态,ownProps:父组件的状态
     return {
         itemInfo:state.itemInfo
     }
 }
 
 // 用来让你的组件获得 actionCreater(发起 action 的函数)
-const mapDispatchToProps = {
-    addItem:Actions.addItem
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addItem:Actions.addItem
+    }  
 }
 
 // react-redux 的方法，可以使你的组件获取到 state 和 actionCreater
