@@ -44,8 +44,8 @@ class Commodity extends Component {
         return (
             <div className="Commodity">
                 <div className="nav">
-                    <span><Link to="/">首页</Link></span>
-                    <span><Link to="/shop">购物车</Link></span>
+                    <Link to="/">首页</Link>
+                    <Link to="/shop">购物车</Link>
                 </div>
                 { item }
             </div>
