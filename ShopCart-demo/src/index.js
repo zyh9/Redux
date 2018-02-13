@@ -29,7 +29,7 @@ import reducers from './reducers';
 let store = createStore(
   reducers,
   applyMiddleware(thunk),
-  //redux启用调试工具
+  // redux启用调试工具
   // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
