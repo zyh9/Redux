@@ -23,9 +23,9 @@ let store = compose(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )(createStore)(reducer)
 
-store.subscribe( _=>{
-  console.log(store.getState())
-})
+// store.subscribe( _=>{
+//   console.log(store.getState())
+// })
 
 let persistor = persistStore(store)
 

@@ -7,17 +7,16 @@ import { Link } from 'react-router-dom';
 class ShopList extends Component {
     
     handleAddClick = (ev) =>{
-        const {dispatch} = this.props
-
-
         let info = null;
-        data.forEach((e) =>{
+        data.forEach(e =>{
             if(e.id === Number(ev.target.id)){
                 info = e;
             }
         })
-        dispatch(Actions.addItem(info))     
-    };
+        let arr = this.props.itemInfo;
+        let add = arr.push(info)
+        this.props.addItem(add)
+    }
 
     render() {
         let item = null;
