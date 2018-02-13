@@ -9,16 +9,33 @@ import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import reducers from './reducers';
 
+// 引入方法，重新封装reducer
+// import {persistStore, persistCombineReducers} from 'redux-persist';
+// import { PersistGate } from 'redux-persist/es/integration/react';
+// import storage from 'redux-persist/es/storage';
+
+// const config = {key: 'redux',storage};
+
+// function configureStore(){
+//   let reducer = persistCombineReducers(config, reducers);
+//   let store = createStore(reducer, applyMiddleware(thunk));
+//   let persistor = persistStore(store);
+//   return { persistor, store }
+// }
+
+// const { persistor, store } = configureStore()
+
 // 创建 store
 let store = createStore(
   reducers,
   applyMiddleware(thunk)
 )
 
-// 这是是特别重要的 Provider
 ReactDOM.render(
   <Provider store={store}>
+    {/* <PersistGate persistor={persistor}> */}
       <App />
+    {/* </PersistGate> */}
   </Provider>
   , document.getElementById('root')
 );
