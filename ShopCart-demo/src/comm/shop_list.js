@@ -16,11 +16,7 @@ class ShopList extends Component {
                 info = e;
             }
         })
-        dispatch(Actions.addItem(info))
-        // let add = 
-        // // console.log(arr,add)
-        // this.props.addItem(add);
-        
+        dispatch(Actions.addItem(info))     
     };
 
     render() {
