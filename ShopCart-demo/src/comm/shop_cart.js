@@ -11,10 +11,10 @@ class ShopCart extends Component {
                 return <div key={i}>{e.info}</div>
             })
         }else{
-            item = <div key='0'>暂无商品哦</div>
+            item = <li key='0'>暂无商品哦</li>
         }
         return (
-            <div>{item}</div>
+            <ul>{item}</ul>
         )
     }
 }

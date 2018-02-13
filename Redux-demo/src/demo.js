@@ -32,4 +32,4 @@ store.subscribe( _=>{
 
     curt = store.getState();
     console.log(pre, curt, pre===curt);
-} )
+})

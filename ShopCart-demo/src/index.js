@@ -14,22 +14,24 @@ import {persistStore, persistReducer} from 'redux-persist';
 import { PersistGate } from 'redux-persist/es/integration/react';
 import storage from 'redux-persist/es/storage';
 
-const config = {key: 'redux',storage};
+const config = {key: 'redux',storage}
 
-console.log(config)
-
-let reducer = persistReducer(config, reducers);
+let reducer = persistReducer(config, reducers)
 
 let store = compose(
   applyMiddleware(thunk),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )(createStore)(reducer)
 
-let persistor = persistStore(store);
+store.subscribe( _=>{
+  console.log(store.getState())
+})
+
+let persistor = persistStore(store)
 
 ReactDOM.render(
   <Provider store={store}>
-    <PersistGate persistor={persistor}>
+    <PersistGate loading = {null} persistor={persistor}>
       <App />
     </PersistGate>
   </Provider>

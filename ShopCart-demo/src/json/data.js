@@ -2,58 +2,58 @@ import imgURL from '../img/gege.jpg';
 const data = [
     {
         id:1,
-        info:'商品1',
+        info:'特卖商品1',
         price:'100',
-        people:'666',
+        people:'111',
         img:imgURL
     },
     {
         id:2,
-        info:'商品2',
+        info:'特卖商品2',
         price:'200',
-        people:'666',
+        people:'222',
         img:imgURL
     },
     {
         id:3,
-        info:'商品3',
+        info:'特卖商品3',
         price:'300',
-        people:'666',
+        people:'333',
         img:imgURL
     },
     {
         id:4,
-        info:'商品4',
+        info:'特卖商品4',
         price:'400',
-        people:'666',
+        people:'444',
         img:imgURL
     },
     {
         id:5,
-        info:'商品5',
+        info:'特卖商品5',
         price:'500',
-        people:'666',
+        people:'555',
         img:imgURL
     },
     {
         id:6,
-        info:'商品6',
+        info:'特卖商品6',
         price:'600',
         people:'666',
         img:imgURL
     },
     {
         id:7,
-        info:'商品7',
+        info:'特卖商品7',
         price:'700',
-        people:'666',
+        people:'777',
         img:imgURL
     },
     {
         id:8,
-        info:'商品8',
+        info:'特卖商品8',
         price:'800',
-        people:'666',
+        people:'888',
         img:imgURL
     }
 ];
