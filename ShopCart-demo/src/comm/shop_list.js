@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 class ShopList extends Component {
     
     handleAddClick = (ev) =>{
-        console.log(this.props.itemInfo)
         let info = null;
         data.forEach((e) =>{
             if(e.id === Number(ev.target.id)){
@@ -15,6 +14,7 @@ class ShopList extends Component {
             }
         })
         let add = this.props.itemInfo.push(info);
+        console.log(this.props.itemInfo)
         this.props.addItem(add);
     };
 
