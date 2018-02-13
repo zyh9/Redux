@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { AddActionCreator } from '../../store/add_action_creators';
-import { data } from '../../json/item_info';
+import { Actions } from '../actions/actions';
+import { data } from '../json/data';
 
-import {
-   Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-class Commodity extends Component {
+class ShopList extends Component {
 
     handleAddClick = (ev) =>{
         let info = null;
@@ -15,7 +13,7 @@ class Commodity extends Component {
             if(e.id === Number(ev.target.id)){
                 info = e;
             }
-        });
+        })
         var arr = this.props.itemInfo;
         arr.push(info);
         this.props.addItem(arr);
@@ -40,37 +38,36 @@ class Commodity extends Component {
                     <span className="find">找相似</span>
                 </p>
             </div>
-        });
+        })
         return (
-            <div className="Commodity">
-                <div className="nav">
+            <div className="shop_list">
+                <div className="title">
                     <Link to="/">首页</Link>
                     <Link to="/shop">购物车</Link>
                 </div>
                 { item }
             </div>
-        );
+        )
     }
 }
 
 // 用来让你的组件能够获得 reducer 里面的 state
 const mapStateToProps = (state, ownProps) => {
     return {
-        itemInfo:state.itemInfo,// reducer 里面的状态
-        // num:ownProps.num// 父组件的状态
+        itemInfo:state.itemInfo
     }
-};
+}
 
 // 用来让你的组件获得 actionCreater(发起 action 的函数)
 const mapDispatchToProps = {
-    addItem:AddActionCreator.addItem
-};
+    addItem:Actions.addItem
+}
 
-// react-redux 的方法，可以使你的组件获取到 state 和 actionCreater，记住一定要写 Provider( index.js 中的那个）
-Commodity = connect(
+// react-redux 的方法，可以使你的组件获取到 state 和 actionCreater
+ShopList = connect(
     mapStateToProps,
     mapDispatchToProps
-)(Commodity);
+)(ShopList)
 
 
-export default Commodity;
+export default ShopList;

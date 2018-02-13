@@ -9,7 +9,7 @@ img{
 body {
   font-family: sans-serif;
 }
-.Commodity{
+.shop_list{
   width:980px;
   height:800px;
   margin:50px 0 0 100px;
@@ -66,11 +66,11 @@ body {
 .find{
   background: pink;
 }
-.nav{
+.title{
   position: absolute;
   top: -30px;
 }
-.nav a{
+.title a{
   width: 80px;
   height: 30px;
   border: 1px solid #333;

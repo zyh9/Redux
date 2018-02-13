@@ -4,8 +4,8 @@ import {
     Route,
     Switch
 } from 'react-router-dom';
-import Commodity from './comm/commodity/commodity';
-import Shop from './comm/ShoppingCart/shop';
+import ShopList from './comm/shop_list';
+import ShopCart from './comm/shop_cart';
 
 
 class App extends Component {
@@ -14,10 +14,10 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" render={()=>{
-              return <Commodity />
+              return <ShopList />
           }} />
           <Route path="/shop" render={()=>{
-              return <Shop />
+              return <ShopCart />
           }} />
         </Switch>
       </Router>
