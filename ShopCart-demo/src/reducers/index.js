@@ -1,5 +1,3 @@
-import { applyMiddleware, createStore } from 'redux';
-import thunk from 'redux-thunk';
 import { types } from '../actions/types';
 
 const initialState = {
@@ -16,10 +14,4 @@ function reducer(state = initialState, action){
     }
 }
 
-// 创建 store
-let store = createStore(
-    reducer,// reducer
-    applyMiddleware(thunk)// 设置中间件
-)
-
-export default store;
+export default reducer;

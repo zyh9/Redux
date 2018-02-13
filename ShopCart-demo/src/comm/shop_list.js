@@ -52,7 +52,8 @@ class ShopList extends Component {
 }
 
 // 用来让你的组件能够获得 reducer 里面的 state
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state, props) => {
+    //state:reducer里面的状态,props:父组件的状态
     return {
         itemInfo:state.itemInfo
     }
