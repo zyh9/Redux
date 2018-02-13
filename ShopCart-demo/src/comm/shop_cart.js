@@ -5,14 +5,13 @@ import { Actions } from '../actions/actions';
 class ShopCart extends Component {
 
     render() {
-        console.log(this.props.itemInfo)
         let item = null;
         if(this.props.itemInfo.length){
             item = this.props.itemInfo.map((e,i)=>{
                 return <div key={i}>{e.info}</div>
             })
         }else{
-            item = <div key='0'>暂无商品哦！</div>
+            item = <div key='0'>暂无商品哦</div>
         }
         return (
             <div>{item}</div>

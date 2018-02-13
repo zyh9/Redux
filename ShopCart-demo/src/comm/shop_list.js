@@ -14,7 +14,7 @@ class ShopList extends Component {
             }
         })
         let add = this.props.itemInfo.push(info);
-        console.log(this.props.itemInfo)
+        // console.log(arr,add)
         this.props.addItem(add);
     };
 

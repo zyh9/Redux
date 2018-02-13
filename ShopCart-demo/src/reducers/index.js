@@ -6,7 +6,7 @@ const initialState = {
 
 function reducer(state = initialState, action){
     switch(action.type){
-        case types.ADD_ITEM_INFO:
+        case types.ADD_ITEM:
             return Object.assign({},state,{
                 itemInfo: action.itemInfo
             })
