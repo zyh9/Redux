@@ -27,6 +27,8 @@ let store = compose(
 //   console.log(store.getState())
 // })
 
+console.log(store)
+
 let persistor = persistStore(store)
 
 ReactDOM.render(

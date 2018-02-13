@@ -5,10 +5,12 @@ const initialState = {
 }
 
 function reducer(state = initialState, action){
-    switch(action.type){
+    let {type,itemInfo} = action;
+    switch(type){
         case types.ADD_ITEM:
+        alert(111)
             return Object.assign({},state,{
-                itemInfo: action.itemInfo
+                itemInfo: itemInfo
             })
         default:return state;
     }

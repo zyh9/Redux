@@ -13,9 +13,7 @@ class ShopList extends Component {
                 info = e;
             }
         })
-        let arr = this.props.itemInfo;
-        let add = arr.push(info)
-        this.props.addItem(add)
+        console.log(this.props.addItem(info))
     }
 
     render() {
