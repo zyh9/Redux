@@ -14,6 +14,7 @@ class ShopList extends Component {
             }
         })
         console.log(this.props.addItem(info))
+        // console.log(this.props.dispatch(Actions.addItem(info)))
     }
 
     render() {
@@ -48,14 +49,6 @@ class ShopList extends Component {
     }
 }
 
-// 用来让你的组件能够获得 reducer 里面的 state
-const mapStateToProps = (state, ownProps) => {
-    //state:reducer里面的状态,ownProps:父组件的状态
-    return {
-        itemInfo:state.itemInfo
-    }
-}
-
 // 用来让你的组件获得 actionCreater(发起 action 的函数)
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -65,7 +58,6 @@ const mapDispatchToProps = (dispatch) => {
 
 // react-redux 的方法，可以使你的组件获取到 state 和 actionCreater
 ShopList = connect(
-    mapStateToProps,
     mapDispatchToProps
 )(ShopList)
 

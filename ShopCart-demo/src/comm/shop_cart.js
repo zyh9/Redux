@@ -6,8 +6,9 @@ class ShopCart extends Component {
 
     render() {
         let item = null;
-        if(this.props.itemInfo.length){
-            item = this.props.itemInfo.map((e,i)=>{
+        console.log(this.props.itemList)
+        if(this.props.itemList.length){
+            item = this.props.itemList.map((e,i)=>{
                 return <div key={i}>{e.info}</div>
             })
         }else{
@@ -22,15 +23,13 @@ class ShopCart extends Component {
 const mapStateToProps = (state, ownProps) => {
     //state:reducer里面的状态,ownProps:父组件的状态
     return {
-        itemInfo:state.itemInfo
+        itemList:state.itemList
     }
 }
 
 // 用来让你的组件获得 actionCreater(发起 action 的函数)
-const mapDispatchToProps = (dispatch) => {
-    return {
-        addItem:Actions.addItem
-    }  
+const mapDispatchToProps = {
+    addItem:Actions.addItem    
 }
 
 ShopCart = connect(
