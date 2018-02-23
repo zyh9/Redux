@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 class ShopList extends Component {
     
-    handleAddClick = (ev) =>{
+    AddClick = (ev) =>{
         let info = null;
         data.forEach(e =>{
             if(e.id === Number(ev.target.id)){
@@ -31,7 +31,7 @@ class ShopList extends Component {
                     <span
                         className="add"
                         id={e.id}
-                        onClick={this.handleAddClick}
+                        onClick={this.AddClick}
                     >加入购物车</span>
                     <span className="find">找相似</span>
                 </p>
@@ -50,7 +50,7 @@ class ShopList extends Component {
 }
 
 // 用来让你的组件获得 actionCreater(发起 action 的函数)
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = _ => {
     return {
         addItem:Actions.addItem
     }  
