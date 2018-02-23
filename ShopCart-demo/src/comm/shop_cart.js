@@ -9,13 +9,17 @@ class ShopCart extends Component {
         console.log(this.props.itemList)
         if(this.props.itemList.length){
             item = this.props.itemList.map((e,i)=>{
-                return <li key={i}>{e.info}</li>
+                return <li key={i}>
+                <img src={e.img} alt="" />
+                <span>商品名称：{e.info}</span>
+                <b>价格：{e.price}</b>
+                </li>
             })
         }else{
             item = <li key='0'>暂无商品哦</li>
         }
         return (
-            <ul>{item}</ul>
+            <ul className="list">{item}</ul>
         )
     }
 }

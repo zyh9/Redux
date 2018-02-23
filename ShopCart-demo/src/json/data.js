@@ -4,56 +4,56 @@ const data = [
         id:1,
         info:'特卖商品1',
         price:'100',
-        people:'111',
+        people:'12',
         img:imgURL
     },
     {
         id:2,
         info:'特卖商品2',
         price:'200',
-        people:'222',
+        people:'34',
         img:imgURL
     },
     {
         id:3,
         info:'特卖商品3',
         price:'300',
-        people:'333',
+        people:'56',
         img:imgURL
     },
     {
         id:4,
         info:'特卖商品4',
         price:'400',
-        people:'444',
+        people:'78',
         img:imgURL
     },
     {
         id:5,
         info:'特卖商品5',
         price:'500',
-        people:'555',
+        people:'12',
         img:imgURL
     },
     {
         id:6,
         info:'特卖商品6',
         price:'600',
-        people:'666',
+        people:'34',
         img:imgURL
     },
     {
         id:7,
         info:'特卖商品7',
         price:'700',
-        people:'777',
+        people:'56',
         img:imgURL
     },
     {
         id:8,
         info:'特卖商品8',
         price:'800',
-        people:'888',
+        people:'78',
         img:imgURL
     }
 ];

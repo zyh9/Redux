@@ -9,6 +9,9 @@ img{
 body {
   font-family: sans-serif;
 }
+ul,li{
+  list-style: none;
+}
 .shop_list{
   width:980px;
   height:800px;
@@ -16,7 +19,7 @@ body {
   position: relative;
 }
 .item{
-  width:230px;
+  width:210px;
   height:340px;
   border:1px solid #eee;
   float: left;
@@ -24,14 +27,14 @@ body {
   position: relative;
 }
 .item img{
-  width:230px;
+  width:210px;
   height:240px;
 }
 .item_text{
   padding: 2px 12px;
   display: block;
   font-size:16px;
-  font-family: '微软雅黑';
+  font-family: 微软雅黑;
 }
 .item_info{
   font-size:16px;
@@ -55,7 +58,6 @@ body {
 }
 .item_btn span{
   cursor: pointer;
-  display: inline-block;
   flex-grow:1; 
   height:100%;
   text-align: center;
@@ -83,4 +85,25 @@ body {
   line-height: 30px;
   text-decoration: none;
   display: inline-block;
+}
+.list{
+  margin: 50px;
+  width: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.list li{
+  padding: 20px;
+  background: #ddd;
+  border-bottom: 1px solid #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #666;
+}
+.list li img{
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
 }
