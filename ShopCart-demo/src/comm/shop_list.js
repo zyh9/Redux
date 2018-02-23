@@ -13,8 +13,8 @@ class ShopList extends Component {
                 info = e;
             }
         })
-        console.log(this.props.addItem(info))
-        // console.log(this.props.dispatch(Actions.addItem(info)))
+        // console.log(this.props.addItem(info))
+        this.props.dispatch(Actions.addItem(info))
     }
 
     render() {
@@ -60,6 +60,5 @@ const mapDispatchToProps = (dispatch) => {
 ShopList = connect(
     mapDispatchToProps
 )(ShopList)
-
 
 export default ShopList;
