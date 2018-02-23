@@ -32,7 +32,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 // 用来让你的组件获得 actionCreater(发起 action 的函数)
-const mapDispatchToProps = _ => {
+const mapDispatchToProps = (dispatch, ownProps) => {
     return{
         addItem:Actions.addItem
     }   
