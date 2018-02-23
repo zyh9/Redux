@@ -9,7 +9,7 @@ class ShopCart extends Component {
         console.log(this.props.itemList)
         if(this.props.itemList.length){
             item = this.props.itemList.map((e,i)=>{
-                return <div key={i}>{e.info}</div>
+                return <li key={i}>{e.info}</li>
             })
         }else{
             item = <li key='0'>暂无商品哦</li>
@@ -28,8 +28,10 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 // 用来让你的组件获得 actionCreater(发起 action 的函数)
-const mapDispatchToProps = {
-    addItem:Actions.addItem    
+const mapDispatchToProps = _ => {
+    return{
+        addItem:Actions.addItem
+    }   
 }
 
 ShopCart = connect(

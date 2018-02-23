@@ -12,7 +12,12 @@ import reducers from './reducers';
 // 引入方法，重新封装reducer
 import {persistStore, persistReducer} from 'redux-persist';
 import { PersistGate } from 'redux-persist/es/integration/react';
-import storage from 'redux-persist/es/storage';
+
+// 引入localStorage作存储
+// import storage from 'redux-persist/es/storage';
+
+// 引入sessionStorage作存储
+import storage from 'redux-persist/es/storage/session.js';
 
 const config = {key: 'redux',storage}
 
@@ -23,11 +28,10 @@ let store = compose(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )(createStore)(reducer)
 
+// 注册store监听器
 // store.subscribe( _=>{
 //   console.log(store.getState())
 // })
-
-// console.log(store)
 
 let persistor = persistStore(store)
 
