@@ -43,6 +43,7 @@ class ShopList extends Component {
         )
     }
 }
+
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         addItem:Actions.addItem
