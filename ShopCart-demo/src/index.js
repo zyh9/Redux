@@ -27,7 +27,7 @@ let store = compose(
   // 激活中间件
   applyMiddleware(thunk),
   // 激活redux-devtools插件
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )(createStore)(reducer)
 
 // 注册store监听器
