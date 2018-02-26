@@ -10,9 +10,9 @@ class ShopCart extends Component {
         if(this.props.itemList.length){
             item = this.props.itemList.map((e,i)=>{
                 return <li key={i}>
-                <img src={e.img} alt="" />
-                <span>商品名称：{e.info}</span>
-                <b>价格：{e.price}</b>
+                    <img src={e.img} alt="" />
+                    <span>商品名称：{e.info}</span>
+                    <b>价格：{e.price}</b>
                 </li>
             })
         }else{
