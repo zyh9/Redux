@@ -6,6 +6,12 @@ import { Link } from 'react-router-dom';
 
 class ShopList extends Component {
     
+    // addClick = (ev) =>{
+    //     let info = null;
+    //     info = data.filter(e =>e.id === Number(ev.target.id))
+    //     this.props.dispatch(Actions.addItem(info))
+    // }
+
     addClick(item){
         console.log(item)
         this.props.dispatch(Actions.addItem(item))
@@ -25,6 +31,7 @@ class ShopList extends Component {
                     <span
                         className="add"
                         id={e.id}
+                        // onClick={this.addClick}
                         onClick={_=>this.addClick(e)}
                     >加入购物车</span>
                     <span className="find">找相似</span>
