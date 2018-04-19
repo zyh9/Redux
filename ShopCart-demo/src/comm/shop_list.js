@@ -14,7 +14,8 @@ class ShopList extends Component {
 
     addClick(item){
         console.log(item)
-        this.props.dispatch(Actions.addItem(item))
+        console.log(this)
+        this.props.dispatch(this.props.addItem(item))
     }
 
     render() {
